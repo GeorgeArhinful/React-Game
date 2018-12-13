@@ -6,22 +6,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black!important;
+  color:  white!important;
+  min-height: 100vh!important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+.world{
+  widows: 100%;
+  height:  auto;
+  display: flex;
+}
+.playerWorld{
+  margin: auto;
 }
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid white;
   border-collapse: collapse;
 }
 tr{
-  height: 50px;
+  height: 25px;
 }
 td{
-  width: 50px;
+  width: 25px;
 }
 img{
-  height: 50px;
+  height: 25px;
 }

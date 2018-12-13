@@ -142,15 +142,7 @@ export const playerPositionChanged = (component) => {
             }
            
             default:
-               currentPlayerPosition[oldInitialPosition[0]][oldInitialPosition[1]] = 2;
-               return {
-                   initialPosition: [oldInitialPosition[0], oldInitialPosition[1]],
-                   playerPosition: currentPlayerPosition,
-                   row,
-                   col,
-                   movement: movement,
-                   mashrooms: countMashrooms(currentPlayerPosition)
-               };
+              
                
         }
     }

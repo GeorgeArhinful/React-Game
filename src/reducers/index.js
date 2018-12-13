@@ -59,6 +59,6 @@ export const playerReducer = (state = initialState , action) => {
                 mashrooms: action.payload.mashrooms
             }
         default:
-            return state;
+            return state
     }
 };

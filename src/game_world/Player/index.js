@@ -12,7 +12,7 @@ class Player extends Component {
    if (this.props.playerPosition !== null){
            return(
            <div>
-               <div style={{padding:'15px auto'}}>{this.props.movement}</div>
+               <div style={{padding:'15px auto'}}><h1>moves: {this.props.movement}</h1></div>
                <table>
                    <tbody>
                      {
