@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
-import {playerPositionChanged} from './../../actions/index.js';
+import {playerPositionChanged ,loadGame} from './../../actions/index.js';
 import {connect} from 'react-redux';
 import mario from './../../image/Mario.png';
 import mashroom from './../../image/mashroom.ico';
 
 
 class Player extends Component {  
+    constructor(){
+        super();
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
+    handleSubmit(){
+        return this.props.loadGame(1 , 1);
+} 
   render() {
-      if (this.props.mashrooms === 0) alert(`you made ${this.props.movement} moves`)
+      if (this.props.mashrooms === 0) {
+        alert(`
+        Game over.
+        you made ${this.props.movement} moves
+        reload the page to start an new Game
+        `);
+    }
    if (this.props.playerPosition !== null){
            return(
            <div>
@@ -51,4 +64,4 @@ const mapStateToProps = (state)=>{
     }
 }
 
-export default connect(mapStateToProps, {playerPositionChanged})(playerPositionChanged(Player))
+export default connect(mapStateToProps, {loadGame})(playerPositionChanged(Player))

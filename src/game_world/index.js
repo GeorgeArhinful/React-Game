@@ -40,7 +40,7 @@ handleSubmit(state){
   render() {
     if (this.props.playerPosition.length <2) {
           return(
-              < div className = ' mt-5 text-center mx-auto d-flex p-0 container' >
+              < div className = ' mt-5 text-center mx-auto d-flex p-0 container' style={{minHeight:'100vh'}} >
                   < form className = 'text-center mt-5 col-md-8 col-12 p-0  m-auto'
                   onSubmit = {
                           (e) => {
@@ -55,7 +55,7 @@ handleSubmit(state){
                     <input name='heigth' className=' mx-auto form-control w-50' type='number' value={this.state.heigth} onChange={this.handleChange} placeholder='heigth'/>
                   </div>
                     <div>
-                    < input className = 'form-control w-25 mx-auto mx-auto mt-5'
+                    < input className = 'btn-warning text-light form-control w-25 mx-auto mx-auto mt-5'
                     type = 'submit'
                     onClick = {
                             (e) => {
@@ -67,9 +67,9 @@ handleSubmit(state){
           )
           }else{
                return (
-            <div className='world'>
-            <div className='playerWorld'>
-                <Player/>
+            <div className='world d-flex h-100 w-100' style={{minHeight:'100vh'}}>
+            < div className = 'playerWorld m-auto' >
+                <Player className=''/>
             </div>
              </div>
     )
