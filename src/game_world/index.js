@@ -16,15 +16,13 @@ class GameWorld extends Component {
 }
    
 handleChange(e){
-console.log(e);
-
 this.setState({
     [e.target.name]: e.target.value
 })
 }
 validate(obj){
     let obKey = Object.keys(obj);
-    obKey.map((key,index)=>{
+    obKey.map((key)=>{
         if (obj[key] === null || obj[key] === ''){
            return alert(`enter ${key}`)
         }
